@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
 
+    <!-- modal css -->
+    <link rel="stylesheet" href="style/modal.css">
+
     <title>NETFLIX</title>
 </head>
 <body>
@@ -38,10 +41,19 @@
                         <i class="fas fa-play"></i>
                         ASSISTIR AGORA
                     </button>
-                    <button role="button" class="botao" >
+                    <button onclick="togglePopup()" role="button" class="botao" >
                         <i class="fas fa-info-circle"></i>
                         MAIS INFORMAÇÕES
                     </button>
+
+                    <div class="info-popup" id="info-popup">
+                        <div class="overlay"></div>
+                        <div class="content" id="popup-content">
+                          <div class="close-button" onclick="togglePopup()">&times;</div>
+                          <h1>Título Teste</h1>
+                          <p>parágrafo teste</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,6 +98,7 @@
     <script src="js/owl/jquery.min.js"></script>
     <script src="js/owl/owl.carousel.min.js"></script>
     <script src="js/owl/setup.js"></script>
+    <script src="js/popup.js"></script>
 
 </body>
 </html>
